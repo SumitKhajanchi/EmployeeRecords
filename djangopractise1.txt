@@ -41,4 +41,15 @@
    git config --global user.name "SumitKhajanchi"
    git config --global user.email khajanchi.sumit24@gmail.com
 -> Initializing the git repository is something we need to do only once per project (and you won't have to re-enter the username and email ever again).
+-> If we dont want any file to be uploaded to Github, create a file .gitignore in djangopractise1 folder and add the file names in seperate lines.
+-> To add all changes done to queue ->> git add --all
+-> To save the changes in our computer git repository execute ->> git commit -m "EmployeeRecord app".
+-> Create a new repository in github.com -> https://github.com/SumitKhajanchi/EmployeeRecords.git 	# Repository name is EmployeeRecords
+-> git remote add origin https://github.com/SumitKhajanchi/EmployeeRecords.git
+-> git push -u origin master # It push all your changes from local repository to github repository
+-> To set our blog in pythonanywhere.com, create a begineer account in it. And generate an API token when new to it.
+-> Now open bash console in pythonanywhere.com. To Deploy code on pythonanywhere we need to pull code frmo GitHub and then configure pythonanywhere to recognise it and start serving it as
+   web application. Pythonanywhere provides helper tool for this.
+-> In PA(pythonanywhere) bash console execute ->> pip3.6 install --user pythonanywhere
+-> Now we run the helper to automatically configure our app from GitHub in PA bash console using command ->> pa_autoconfigure_django.py https://github.com/SumitKhajanchi/EmployeeRecords.git
 -> 
