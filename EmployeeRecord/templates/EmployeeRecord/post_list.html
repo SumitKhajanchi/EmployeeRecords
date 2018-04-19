@@ -3,7 +3,7 @@
 {% block content %}
 {% for post in posts %}
 	<div class="post">
-		<h1><a href=""><p>Name: {{ post.name }}</p></a></h1>
+		<h1><a href="{% url 'post_detail' pk=post.pk %}"><p>Name: {{ post.name }}</p></a></h1>
 		<div class="employee_id">
 			<p>Employee ID: {{ post.employee_id }}</p>
 		</div>
