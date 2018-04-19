@@ -2,7 +2,7 @@ from django.db import models
 from django.utils import timezone
 
 class Post(models.Model):
-    employee_id = models.CharField(max_length=10)
+    employee_id = models.IntegerField()
     name = models.CharField(max_length=50)
     age = models.IntegerField()
     gender = models.CharField(max_length=6)

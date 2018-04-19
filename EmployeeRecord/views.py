@@ -1,5 +1,8 @@
 from django.shortcuts import render
+from django.utils import timezone
+from .models import Post
 def post_list(request):
-    return render(request, 'EmployeeRecord/post_list.html', {})
+    posts = Post.objects.order_by('joining_date')
+    return render(request, 'EmployeeRecord/post_list.html', {'posts':posts})
 
 # Create your views here.
