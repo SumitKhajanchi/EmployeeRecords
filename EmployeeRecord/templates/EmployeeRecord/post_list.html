@@ -1,14 +1,16 @@
-<div>
-    <h1><a href="/">Employee Record Blog</a></h1>
-</div>
+{% extends 'EmployeeRecord/base.html' %}
 
+{% block content %}
 {% for post in posts %}
-    <div>
-        <p>Employee ID: {{ post.employee_id }}</p>
-        <p>Name: {{ post.name }}</p>
+	<div class="post">
+		<h1><a href=""><p>Name: {{ post.name }}</p></a></h1>
+		<div class="employee_id">
+			<p>Employee ID: {{ post.employee_id }}</p>
+		</div>
 		<p>Age: {{ post.age }}</p>
 		<p>Gender: {{ post.gender }}</p>
 		<p>Joining date: {{ post.joining_date }}</p>
 		<p>{{ post.text|linebreaksbr }}</p>
-    </div>
+	</div>
 {% endfor %}
+{% endblock %}
